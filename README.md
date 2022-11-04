@@ -1,6 +1,6 @@
 # OpenBootCampPython
 Repository to store Python boot camp.
 
-* Exercise 1: Desde la consola de python almacena la cadena “Hola mundo!” en una variable y muéstrala. Tienes que subir capturas de pantalla en una carpeta comprimida zip.
+* Exercise 2: Modifica la variable del anterior ejercicio en la consola de python y después muestrala por consola para ver la modificación de la variable.
 
   * Screenshot in folder "src/ExerciseOne/helloworld.png" on branch ExerciseOne.
