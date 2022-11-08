@@ -1,8 +1,12 @@
-import ExerciseFour.invertedCount as e4
+from src.exercisefour.invertedCount import invertedCount
 
 
 def main():
-    e4.invertedCount()
+    """Main script for exercise four
+    :return: None
+    :rtype: NoneType
+    """
+    invertedCount()
 
 
 if __name__ == '__main__':
