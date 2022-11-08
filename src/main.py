@@ -1,4 +1,8 @@
 def main():
+    """Main script for pythonBootCamp project
+    :return: None
+    :rtype: NoneType
+    """
     pass
 
 
