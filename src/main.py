@@ -1,9 +1,13 @@
-import ExerciseFive.isBisiesto as e5
+from src.exercisefive.bisiesto import isbisiesto
 
 
 def main():
+    """Main script for exercise five
+    :return: None
+    :rtype: NoneType
+    """
     year = input('Introduzca un año: ')
-    if e5.isBisiesto(int(year)):
+    if isbisiesto(int(year)):
         print('El año ' + year + ' es bisiesto')
     else:
         print('El año ' + year + ' no es bisiesto')
