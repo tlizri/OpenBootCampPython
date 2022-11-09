@@ -37,6 +37,13 @@ def toTimeFormat(sec: int) -> list:
 
 
 def showTime(t: list):
+    """Show in terminal the time in format 'Faltan HH hora(s) mm minuto(s) ss segundo(s)
+    every second
+    :param t: time to show in format (HH, mm, ss)
+    :type t: list
+    :return: None
+    :rtype: NoneType
+    """
     msg = 'Faltan '
     msg += '0' + str(t[0]) if t[0] < 10 else str(t[0])
     msg += ' hora ' if t[0] == 1 else ' horas '
