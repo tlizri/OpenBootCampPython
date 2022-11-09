@@ -11,7 +11,7 @@ def main():
     """
     home = False
     while not home:
-        isHomeTime()
+        home = isHomeTime()
 
 
 if __name__ == '__main__':
