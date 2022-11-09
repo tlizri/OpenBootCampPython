@@ -56,7 +56,7 @@ def showTime(t: list):
 
 
 def isHomeTime():
-    """Function calculate the time left until work end
+    """Function calculate the time left until work end show it every second
     :return: None
     :rtype: NoneType
     """
