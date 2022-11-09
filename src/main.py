@@ -1,9 +1,17 @@
+from time import sleep
+
+
+from exerciseseven.ishometime import isHomeTime
+
+
 def main():
-    """Main script for pythonBootCamp project
+    """Main script for exercise seven B
     :return: None
     :rtype: NoneType
     """
-    pass
+    home = False
+    while not home:
+        home = isHomeTime()
 
 
 if __name__ == '__main__':
