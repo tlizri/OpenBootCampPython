@@ -73,5 +73,5 @@ def isHomeTime():
         showTime(left)
         return False
     else:
-        print('Hora de ir a casa')
+        print('Hora de ir a casa', end='\r')
         return True
