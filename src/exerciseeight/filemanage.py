@@ -28,6 +28,23 @@ class FileManager:
         """
         del self._path, self._filename, self._file
 
+    def _closeFile(self):
+        """Private method to close a file
+        :return: None
+        :rtype: NoneType
+        """
+        self._file.close()
+        self._file = None
+
+    def _openTextFile(self, mode: str):
+        """Private method to open a text file
+        :param mode: mode to open the text file
+        :type mode: str
+        :return: None
+        :rtype: NoneType
+        """
+        self._file = open(f'{self._path}{self._filename}', mode)
+
     def createTextFile(self):
         """Method to create a text file
         :return: None
@@ -39,15 +56,6 @@ class FileManager:
         except FileExistsError:
             pass
 
-    def _openTextFile(self, mode: str):
-        """Private method to open a text file
-        :param mode: mode to open the text file
-        :type mode: str
-        :return: None
-        :rtype: NoneType
-        """
-        self._file = open(f'{self._path}{self._filename}', mode)
-
     def writeTextFile(self, text: str):
         """Method that open a text file, delete its content, write text and close
         :param text: text to be written in the text file
@@ -58,11 +66,3 @@ class FileManager:
         self._openTextFile('wt')
         self._file.write(text)
         self._closeFile()
-
-    def _closeFile(self):
-        """Private method to close a file
-        :return: None
-        :rtype: NoneType
-        """
-        self._file.close()
-        self._file = None
