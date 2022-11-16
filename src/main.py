@@ -1,9 +1,13 @@
+from exerciseten.radiobutton import mainApp
+
+
 def main():
-    """Main script for pythonBootCamp project
+    """Main script for exercise nine.A
     :return: None
     :rtype: NoneType
     """
-    pass
+    state, app = mainApp()
+    exit(state)
 
 
 if __name__ == '__main__':
