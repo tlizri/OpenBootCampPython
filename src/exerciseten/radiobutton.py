@@ -22,21 +22,22 @@ class Application:
         master.minsize(width=220, height=220)
 
         # Variable
-        self._rbv = tk.IntVar()
+        self._rbv = tk.StringVar(value=' ')
 
         # Widgets
         self._rb1 = tk.Radiobutton()
         self._rb2 = tk.Radiobutton()
         self._rb3 = tk.Radiobutton()
         self._bt = tk.Button()
+        self._lb = tk.Label()
 
         # Frame
         # # Init main frame
         self._main = tk.Frame(master=master, height=420, width=420)
-        self._main.grid_propagate(False)
+        self._main.grid_propagate(True)
         self._main.pack(fill='both', expand=True)
-        self._main.rowconfigure(index=0, weight=1)
-        self._main.columnconfigure(index=0, weight=1)
+        self._main.rowconfigure(index=0, weight=420)
+        self._main.columnconfigure(index=0, weight=420)
 
         # # Init button frame
         self._fb = tk.Frame(master=self._main, height=1, width=1)
@@ -56,33 +57,42 @@ class Application:
         # Start application
         master.mainloop()
 
+    def _cambiarLabel(self):
+        self._lb.config(text=self._rbv.get())
+
     def _reiniciar(self):
         """Method to restore radio button selections
         :return: None
         :rtype: NoneType
         """
-        self._rbv.set(False)
+        self._rbv.set(' ')
 
     def _createWidgets(self):
-        """Method to instance and place button widgets
+        """Method to instance and place buttons and label widgets
         :return: None
         :rtype: NoneType
         """
         # Radio buttons
         # # Init radio buttons
-        self._rb1 = tk.Radiobutton(self._frb, text='Opcion 1', value=1, variable=self._rbv)
-        self._rb2 = tk.Radiobutton(self._frb, text='Opcion 2', value=2, variable=self._rbv)
-        self._rb3 = tk.Radiobutton(self._frb, text='Opcion 3', value=3, variable=self._rbv)
+        self._rb1 = tk.Radiobutton(self._frb, text='Opción 1', value='Opción 1',
+                                   variable=self._rbv, command=lambda: self._cambiarLabel())
+        self._rb2 = tk.Radiobutton(self._frb, text='Opción 2', value='Opción 2',
+                                   variable=self._rbv, command=lambda: self._cambiarLabel())
+        self._rb3 = tk.Radiobutton(self._frb, text='Opción 3', value='Opción 3',
+                                   variable=self._rbv, command=lambda: self._cambiarLabel())
+
         # # Place radio buttons
         self._rb1.grid(column=0, row=0, ipadx=0, ipady=0, padx=10, pady=5, sticky=tk.W + tk.N)
         self._rb2.grid(column=0, row=1, ipadx=0, ipady=0, padx=10, pady=5, sticky=tk.W + tk.N)
         self._rb3.grid(column=0, row=2, ipadx=0, ipady=0, padx=10, pady=5, sticky=tk.W + tk.N)
 
-        # Button
-        # # Init button
+        # Button and label
+        # # Init button and label
         self._bt = tk.Button(self._fb, command=lambda: self._reiniciar(), text='Reiniciar')
-        # # Place button
-        self._bt.grid(column=0, row=0, ipadx=0, ipady=0, padx=10, pady=5, sticky=tk.S)
+        self._lb = tk.Label(self._fb, textvariable=self._rbv)
+        # # Place button and label
+        self._lb.grid(column=0, row=0, ipadx=0, ipady=0, padx=10, pady=5, sticky=tk.N)
+        self._bt.grid(column=0, row=1, ipadx=0, ipady=0, padx=10, pady=5, sticky=tk.S)
 
 
 def mainApp() -> tuple[int, Application or None]:
