@@ -2,7 +2,7 @@ from exerciseten.radiobutton import mainApp
 
 
 def main():
-    """Main script for exercise nine.A
+    """Main script for exercise ten.A
     :return: None
     :rtype: NoneType
     """

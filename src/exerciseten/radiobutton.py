@@ -15,7 +15,7 @@ class Application:
         master.geometry('420x420')
 
         # # Title of the window
-        master.title('Ejercicio 9.A')
+        master.title('Ejercicio 10.A')
 
         # # Max and min window size
         master.maxsize(width=400, height=400)
@@ -58,6 +58,10 @@ class Application:
         master.mainloop()
 
     def _cambiarLabel(self):
+        """Method to change label text
+        :return: None
+        :rtype: NoneType
+        """
         self._lb.config(text=self._rbv.get())
 
     def _reiniciar(self):
@@ -98,7 +102,7 @@ class Application:
 def mainApp() -> tuple[int, Application or None]:
     """Main function to start Application class
     :return: Application class, None when error exist
-    :rtype: Application
+    :rtype: tuple[tk.TclError, Application or None]
     """
     # Main window of an application
     root = tk.Tk()
