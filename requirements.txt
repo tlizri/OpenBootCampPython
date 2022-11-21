@@ -1,3 +1,5 @@
 -i https://pypi.org/simple
-setuptools==65.5.1 ; python_version >= '3.7'
+pip==22.3.1
+pysqlite3==0.4.7
+setuptools==65.6.0 ; python_version >= '3.7'
 wheel==0.38.0
