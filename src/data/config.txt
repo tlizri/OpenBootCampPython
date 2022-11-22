@@ -1,0 +1,10 @@
+PATHS
+database=../pythonBootCamp/src/data/Eleven.db
+
+TABLES
+table=Alumnos
+
+ALUMNOS
+id=int
+nombre=str
+apellido=str
