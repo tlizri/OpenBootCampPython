@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Nombre: {{ director.first_name }} {{ director.last_name }}</h1>
+  <p><strong>Fecha nacimiento:</strong> {{ director.date_of_birth }}</p>
+  <p><strong>Fecha fallecimiento:</strong> {{ director.date_of_death }}</p>
+  <div style="margin-left:20px;margin-top:20px">
+      <h4>Peliculas</h4>
+
+      {% for movie in director.movie_set.all %}
+        <hr>
+        <p>
+          <a href="{{ movie.get_absolute_url }}">{{ movie.title }}</a></p>
+    {% endfor %}
+  </div>
+
+
+{% endblock %}
