@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Local Videoclub Home</h1>
+  <p>Welcome to Videoclub, a website developed by <em>Izri</em>!</p>
+  <h2>Dynamic content</h2>
+  <p>The videoclub has the following record counts:</p>
+  <ul>
+    <li><strong>Peliculas:</strong> {{ num_movies }}</li>
+    <li><strong>Directores:</strong> {{ num_directors }}</li>
+    <li><strong>Acción:</strong> {{ num_action }}</li>
+    <li><strong>Animación:</strong> {{ num_animation }}</li>
+    <li><strong>Romance:</strong> {{ num_romance }}</li>
+    <li><strong>Fantasía:</strong> {{ num_fantasy }}</li>
+    <li><strong>Terror:</strong> {{ num_terror }}</li>
+    <li><strong>Ciancia Ficción:</strong> {{ num_scifi }}</li>
+    <li><strong>Aventura:</strong> {{ num_adventure }}</li>
+    <li><strong>Misterio:</strong> {{ num_mistery }}</li>
+    <li><strong>Suspense:</strong> {{ num_thriller }}</li>
+    <li><strong>Drama:</strong> {{ num_drama }}</li>
+  </ul>
+{% endblock %}
