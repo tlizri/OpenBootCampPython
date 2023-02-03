@@ -1,6 +1,6 @@
 -i https://pypi.org/simple
 asgiref==3.5.2 ; python_version >= '3.7'
-django==4.1.4
+django==4.1.6
 pip==22.3.1
 pysqlite3==0.4.7
 setuptools==65.6.3 ; python_version >= '3.7'
